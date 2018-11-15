@@ -1,3 +1,11 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Record.cs](./CS/WindowsApplication3/Data/Record.cs) (VB: [Record.vb](./VB/WindowsApplication3/Data/Record.vb))
+* [FilterNameProvider.cs](./CS/WindowsApplication3/FilterNameProvider.cs) (VB: [FilterNameProvider.vb](./VB/WindowsApplication3/FilterNameProvider.vb))
+* [Main.cs](./CS/WindowsApplication3/Main.cs) (VB: [Main.vb](./VB/WindowsApplication3/Main.vb))
+* [Program.cs](./CS/WindowsApplication3/Program.cs) (VB: [Program.vb](./VB/WindowsApplication3/Program.vb))
+<!-- default file list end -->
 # How to set custom names for grid filters and save/restore these names with a grid layout
 
 
