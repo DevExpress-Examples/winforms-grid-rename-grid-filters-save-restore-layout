@@ -93,6 +93,7 @@ Namespace DXSample
                     Else
                         fItem.FilterName = filterNameEdit.Text
                     End If
+                    view.LayoutChanged()
                 End If
             End Using
         End Sub
