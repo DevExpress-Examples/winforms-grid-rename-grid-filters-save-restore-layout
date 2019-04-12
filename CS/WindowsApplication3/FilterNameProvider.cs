@@ -89,6 +89,7 @@ namespace DXSample {
                         filters.Add(new GridFitlerItem() { FilterString = view.ActiveFilterString, FilterName = filterNameEdit.Text });
                     else
                         fItem.FilterName = filterNameEdit.Text;
+                    view.LayoutChanged();
                 }
             }
         }
