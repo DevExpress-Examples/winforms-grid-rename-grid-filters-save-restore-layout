@@ -1,6 +1,9 @@
-﻿Imports DevExpress.XtraGrid
+Imports DevExpress.XtraGrid
+
 Namespace DXSample
-    Partial Public Class Main
+
+    Partial Class Main
+
         ''' <summary>
         ''' Required designer variable.
         ''' </summary>
@@ -11,20 +14,20 @@ Namespace DXSample
         ''' </summary>
         ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-            If disposing AndAlso (components IsNot Nothing) Then
-                components.Dispose()
+            If disposing AndAlso (Me.components IsNot Nothing) Then
+                Me.components.Dispose()
             End If
+
             MyBase.Dispose(disposing)
         End Sub
 
-        #Region "Windows Form Designer generated code"
-
+'#Region "Windows Form Designer generated code"
         ''' <summary>
         ''' Required method for Designer support - do not modify
         ''' the contents of this method with the code editor.
         ''' </summary>
         Private Sub InitializeComponent()
-            Dim resources As New System.ComponentModel.ComponentResourceManager(GetType(Main))
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DXSample.Main))
             Me.ribbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
             Me.recordBindingSource = New System.Windows.Forms.BindingSource()
             Me.imageCollection1 = New DevExpress.Utils.ImageCollection()
@@ -49,14 +52,14 @@ Namespace DXSample
             Me.colDt = New DevExpress.XtraGrid.Columns.GridColumn()
             Me.colState = New DevExpress.XtraGrid.Columns.GridColumn()
             Me.colImage = New DevExpress.XtraGrid.Columns.GridColumn()
-            DirectCast(Me.recordBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.imageCollection1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.ribbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.repositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.repositoryItemTrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.repositoryItemProgressBar1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.gridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.gridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.recordBindingSource), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.imageCollection1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.ribbonControl1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.repositoryItemTextEdit1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.repositoryItemTrackBar1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.repositoryItemProgressBar1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.gridControl1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.gridView1), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             ' 
             ' ribbonPageGroup1
@@ -70,17 +73,17 @@ Namespace DXSample
             ' 
             ' imageCollection1
             ' 
-            Me.imageCollection1.ImageStream = (DirectCast(resources.GetObject("imageCollection1.ImageStream"), DevExpress.Utils.ImageCollectionStreamer))
+            Me.imageCollection1.ImageStream = CType((resources.GetObject("imageCollection1.ImageStream")), DevExpress.Utils.ImageCollectionStreamer)
             ' 
             ' ribbonControl1
             ' 
             Me.ribbonControl1.ExpandCollapseItem.Id = 0
-            Me.ribbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() { Me.ribbonControl1.ExpandCollapseItem, Me.barButtonItem1, Me.barButtonItem2, Me.barEditItem1, Me.barEditItem2, Me.barButtonItem3, Me.barButtonItem4, Me.barButtonItem5})
+            Me.ribbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl1.ExpandCollapseItem, Me.barButtonItem1, Me.barButtonItem2, Me.barEditItem1, Me.barEditItem2, Me.barButtonItem3, Me.barButtonItem4, Me.barButtonItem5})
             Me.ribbonControl1.Location = New System.Drawing.Point(0, 0)
             Me.ribbonControl1.MaxItemId = 11
             Me.ribbonControl1.Name = "ribbonControl1"
-            Me.ribbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() { Me.ribbonPage1})
-            Me.ribbonControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() { Me.repositoryItemProgressBar1, Me.repositoryItemTextEdit1, Me.repositoryItemTrackBar1})
+            Me.ribbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.ribbonPage1})
+            Me.ribbonControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.repositoryItemProgressBar1, Me.repositoryItemTextEdit1, Me.repositoryItemTrackBar1})
             Me.ribbonControl1.Size = New System.Drawing.Size(1012, 141)
             ' 
             ' barButtonItem1
@@ -130,22 +133,24 @@ Namespace DXSample
             ' barButtonItem4
             ' 
             Me.barButtonItem4.Caption = "Save Layout"
-            Me.barButtonItem4.Glyph = (DirectCast(resources.GetObject("barButtonItem4.Glyph"), System.Drawing.Image))
+            Me.barButtonItem4.Glyph = CType((resources.GetObject("barButtonItem4.Glyph")), System.Drawing.Image)
             Me.barButtonItem4.Id = 9
-            Me.barButtonItem4.LargeGlyph = (DirectCast(resources.GetObject("barButtonItem4.LargeGlyph"), System.Drawing.Image))
+            Me.barButtonItem4.LargeGlyph = CType((resources.GetObject("barButtonItem4.LargeGlyph")), System.Drawing.Image)
             Me.barButtonItem4.Name = "barButtonItem4"
+            AddHandler Me.barButtonItem4.ItemClick, New DevExpress.XtraBars.ItemClickEventHandler(AddressOf Me.OnSaveLayoutButtonClick)
             ' 
             ' barButtonItem5
             ' 
             Me.barButtonItem5.Caption = "Restore Layout"
-            Me.barButtonItem5.Glyph = (DirectCast(resources.GetObject("barButtonItem5.Glyph"), System.Drawing.Image))
+            Me.barButtonItem5.Glyph = CType((resources.GetObject("barButtonItem5.Glyph")), System.Drawing.Image)
             Me.barButtonItem5.Id = 10
-            Me.barButtonItem5.LargeGlyph = (DirectCast(resources.GetObject("barButtonItem5.LargeGlyph"), System.Drawing.Image))
+            Me.barButtonItem5.LargeGlyph = CType((resources.GetObject("barButtonItem5.LargeGlyph")), System.Drawing.Image)
             Me.barButtonItem5.Name = "barButtonItem5"
+            AddHandler Me.barButtonItem5.ItemClick, New DevExpress.XtraBars.ItemClickEventHandler(AddressOf Me.OnRestoreLayoutButtonClick)
             ' 
             ' ribbonPage1
             ' 
-            Me.ribbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() { Me.ribbonPageGroup2})
+            Me.ribbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.ribbonPageGroup2})
             Me.ribbonPage1.Name = "ribbonPage1"
             Me.ribbonPage1.Text = "Home"
             ' 
@@ -170,11 +175,11 @@ Namespace DXSample
             Me.gridControl1.Name = "gridControl1"
             Me.gridControl1.Size = New System.Drawing.Size(1012, 479)
             Me.gridControl1.TabIndex = 3
-            Me.gridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() { Me.gridView1})
+            Me.gridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gridView1})
             ' 
             ' gridView1
             ' 
-            Me.gridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() { Me.colID, Me.colParentID, Me.colText, Me.colDt, Me.colState, Me.colImage})
+            Me.gridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colID, Me.colParentID, Me.colText, Me.colDt, Me.colState, Me.colImage})
             Me.gridView1.GridControl = Me.gridControl1
             Me.gridView1.Name = "gridView1"
             ' 
@@ -229,44 +234,65 @@ Namespace DXSample
             Me.Controls.Add(Me.ribbonControl1)
             Me.Name = "Main"
             Me.Text = "Main"
-            DirectCast(Me.recordBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.imageCollection1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.ribbonControl1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.repositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.repositoryItemTrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.repositoryItemProgressBar1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.gridControl1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.gridView1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.recordBindingSource), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.imageCollection1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.ribbonControl1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.repositoryItemTextEdit1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.repositoryItemTrackBar1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.repositoryItemProgressBar1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.gridControl1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.gridView1), System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
-
         End Sub
 
-        #End Region
-
+'#End Region
         Private recordBindingSource As System.Windows.Forms.BindingSource
+
         Private ribbonPageGroup1 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
+
         Private imageCollection1 As DevExpress.Utils.ImageCollection
+
         Private ribbonControl1 As DevExpress.XtraBars.Ribbon.RibbonControl
+
         Private ribbonPage1 As DevExpress.XtraBars.Ribbon.RibbonPage
+
         Private ribbonPageGroup2 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
-        Private gridControl1 As GridControl
+
+        Private gridControl1 As DevExpress.XtraGrid.GridControl
+
         Private gridView1 As DevExpress.XtraGrid.Views.Grid.GridView
+
         Private colID As DevExpress.XtraGrid.Columns.GridColumn
+
         Private colParentID As DevExpress.XtraGrid.Columns.GridColumn
+
         Private colText As DevExpress.XtraGrid.Columns.GridColumn
+
         Private colDt As DevExpress.XtraGrid.Columns.GridColumn
+
         Private colState As DevExpress.XtraGrid.Columns.GridColumn
+
         Private colImage As DevExpress.XtraGrid.Columns.GridColumn
+
         Private barButtonItem1 As DevExpress.XtraBars.BarButtonItem
+
         Private barButtonItem2 As DevExpress.XtraBars.BarButtonItem
+
         Private barEditItem1 As DevExpress.XtraBars.BarEditItem
+
         Private repositoryItemTextEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemTextEdit
+
         Private barEditItem2 As DevExpress.XtraBars.BarEditItem
+
         Private repositoryItemTrackBar1 As DevExpress.XtraEditors.Repository.RepositoryItemTrackBar
+
         Private barButtonItem3 As DevExpress.XtraBars.BarButtonItem
+
         Private repositoryItemProgressBar1 As DevExpress.XtraEditors.Repository.RepositoryItemProgressBar
-        Private WithEvents barButtonItem4 As DevExpress.XtraBars.BarButtonItem
-        Private WithEvents barButtonItem5 As DevExpress.XtraBars.BarButtonItem
+
+        Private barButtonItem4 As DevExpress.XtraBars.BarButtonItem
+
+        Private barButtonItem5 As DevExpress.XtraBars.BarButtonItem
     End Class
 End Namespace
