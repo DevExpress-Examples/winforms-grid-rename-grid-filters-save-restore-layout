@@ -66,7 +66,7 @@ namespace DXSample {
         void OnViewMouseDown(object sender, System.Windows.Forms.MouseEventArgs e) {
             GridView view = sender as GridView;
             GridHitInfo hitInfo = view.CalcHitInfo(e.Location);
-            if (e.Button == MouseButtons.Right && hitInfo.HitTest == GridHitTest.FilterPanelText) {
+            if (e.Button == MouseButtons.Right && hitInfo.HitTest == GridHitTest.FilterPanel) {
                 ((IDXDropDownControl)menu).Show(new SkinMenuManager(view.GridControl.LookAndFeel), view.GridControl, e.Location);
             }
         }
