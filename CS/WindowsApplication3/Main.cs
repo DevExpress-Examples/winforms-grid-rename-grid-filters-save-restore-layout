@@ -9,6 +9,7 @@ namespace DXSample {
         FilterNameProvider provider;
         public Main() {
             InitializeComponent();
+            gridView1.OptionsView.FilterCriteriaDisplayStyle = FilterCriteriaDisplayStyle.Text;
             recordBindingSource.DataSource = DataHelper.GetData(10);
             provider = new FilterNameProvider(gridView1) { AllowSettingFilterNames = true };
         }
