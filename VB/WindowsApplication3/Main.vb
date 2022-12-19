@@ -10,6 +10,7 @@ Namespace DXSample
 
         Public Sub New()
             InitializeComponent()
+            gridView1.OptionsView.FilterCriteriaDisplayStyle = FilterCriteriaDisplayStyle.Text
             recordBindingSource.DataSource = DataHelper.GetData(10)
             provider = New FilterNameProvider(gridView1) With {.AllowSettingFilterNames = True}
         End Sub
