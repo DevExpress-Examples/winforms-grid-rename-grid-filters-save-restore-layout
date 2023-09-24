@@ -3,23 +3,61 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T329217)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
 
-* [Record.cs](./CS/WindowsApplication3/Data/Record.cs) (VB: [Record.vb](./VB/WindowsApplication3/Data/Record.vb))
+# WinForms Data Grid - Rename grid filters and serialize custom names
+
+When a end users applies a filter to a grid, the filter is shown within the [Filter Panel](https://docs.devexpress.com/WindowsForms/1424/controls-and-libraries/data-grid/visual-elements/view-common-elements/filter-panel). If the [AllowMRUFilterList](https://docs.devexpress.com/WindowsForms/DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.AllowMRUFilterList) option is enabled, the user can access [recently used filters](https://docs.devexpress.com/WindowsForms/1448/controls-and-libraries/data-grid/visual-elements/view-common-elements/views-mru-(most-recently-used)-filter-list) and apply them.
+
+This example shows how to allow the user to rename filters as needed:
+
+![Rename grid filters and serialize custom names](https://raw.githubusercontent.com/DevExpress-Examples/how-to-set-custom-names-for-grid-filters-and-save-restore-these-names-with-a-grid-layout-t329217/21.1.3%2B/media/winforms-grid-custom-filter-names.gif)
+
+```csharp
+public partial class Main : XtraForm {
+    FilterNameProvider provider;
+    public Main() {
+        InitializeComponent();
+        gridView1.OptionsView.FilterCriteriaDisplayStyle = FilterCriteriaDisplayStyle.Text;
+        recordBindingSource.DataSource = DataHelper.GetData(10);
+        provider = new FilterNameProvider(gridView1) { AllowSettingFilterNames = true };
+    }
+}
+```
+
+The `FilterNameProvider.GridFilters` property is marked with the `XtraSerializableProperty` attribute. The following code serializes custom filter names with the grid layout:
+
+```csharp
+void OnSaveLayoutButtonClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e) {
+    gridView1.SaveLayoutToXmlEx(provider, filePath);
+}
+```
+
+The following code deserializes (restores) grid filters:
+
+```csharp
+void OnRestoreLayoutButtonClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e) {
+    gridView1.RestoreLayoutFromXmlEx(provider, filePath);
+}
+```
+
+`GridFitlerItem` objects are not created automaticall. You should declare a special method in the `FilterNameProvider` class that creates such objects. Name this method according to the following pattern: "XtraCreate<PropertyName>Item". In this example, this is the `XtraCreateGridFiltersItem` method:
+
+```csharp
+internal GridFitlerItem XtraCreateGridFiltersItem(XtraItemEventArgs e) {
+    GridFitlerItem fItem = new GridFitlerItem();
+    GridFilters.Add(fItem);
+    return fItem;
+}
+```
+
+
+## Files to Review
+
 * [FilterNameProvider.cs](./CS/WindowsApplication3/FilterNameProvider.cs) (VB: [FilterNameProvider.vb](./VB/WindowsApplication3/FilterNameProvider.vb))
 * [Main.cs](./CS/WindowsApplication3/Main.cs) (VB: [Main.vb](./VB/WindowsApplication3/Main.vb))
-* [Program.cs](./CS/WindowsApplication3/Program.cs) (VB: [Program.vb](./VB/WindowsApplication3/Program.vb))
-<!-- default file list end -->
-# How to set custom names for grid filters and save/restore these names with a grid layout
 
 
-<p>When an end-users applies any filter to a grid, this filter is shown in the <a href="https://documentation.devexpress.com/#WindowsForms/CustomDocument1424">Filter Panel</a>. When the <a href="https://documentation.devexpress.com/WindowsForms/DevExpressXtraGridViewsBaseColumnViewOptionsFilter_AllowMRUFilterListtopic.aspx">AllowMRUFilterList</a> property is set to <strong>true</strong>, recently used filters can be accessed via the View's <a href="https://documentation.devexpress.com/WindowsForms/CustomDocument1448.aspx">MRU Filter List</a>. It is a convenient way to access previous filters. Since filters can contain multiple filter conditions, it is not always comfortable to search for a necessary filter in the <strong>MRU Filter List</strong>. This example illustrates how to provide an end-user with the capability to set custom short names for filters. This way, a custom filter name will be shown in the <strong>Filter Panel</strong> as well as in the <strong>MRU Filter List</strong>.<br><br></p>
-<p>To implement this feature, we have created a custom <strong>FilterNameProvider</strong> class. Create this class object and pass your <strong>GridView</strong> to its constructor. Once it is done, set the <strong>FilterNameProvider.AllowSettingFilterNames</strong> property to true to enable this functionality.<br><br></p>
-<p>Now, when you right-click a filter text in the <strong>Filter Panel</strong>, a context menu will be shown. Click the <strong>Save Filter As</strong> item to invoke <a href="https://documentation.devexpress.com/#WindowsForms/clsDevExpressXtraBarsDocking2010CustomizationFlyoutDialogtopic">FlyoutDialog</a>. In this <strong>FlyoutDialog</strong>, you can enter a custom filter name for the current filter shown in the <strong>Filter Panel</strong>.<br><br></p>
-<p>So, your end-user can now assign custom short names for filters. However, this information will be lost once you save and restore a grid layout. To save custom filter names with the grid layout, we use the <strong>XmlXtraSerializer.SerializeObjects</strong> method. We pass the current <strong>GridView</strong> together with a <strong>FilterNameProvider</strong> object to this method. <strong>FilterNameProvider</strong> has the <strong>GridFilters </strong>property of the<strong> List<GridFitlerItem></strong> type, which is intended to be serialized. That is why this property is marked with the <strong>XtraSerializableProperty</strong> attribute. Note that properties of the <strong>GridFitlerItem</strong> class are also marked with this attribute.<br><br></p>
-<p>To restore these filters, we use the <strong>XmlXtraSerializer.DeserializeObjects</strong> method. Since new <strong>GridFitlerItem</strong> objects will not be created automatically when this method is called, it is necessary to declare a special method at the <strong>FilterNameProvider</strong> class to allow you to create such objects manually. This method should have a name according to this pattern: “<strong>XtraCreate<PropertyName>Item</strong>”. That is why we call this method as <strong>XtraCreateGridFiltersItem</strong>. </p>
+## Documentation
 
-<br/>
-
-
+* [CustomFilterDisplayText Event](https://docs.devexpress.com/WindowsForms/DevExpress.XtraGrid.Views.Base.ColumnView.CustomFilterDisplayText)
+* [Save and Restore Grid Layout](https://docs.devexpress.com/WindowsForms/772/controls-and-libraries/data-grid/save-and-restore-layout)
