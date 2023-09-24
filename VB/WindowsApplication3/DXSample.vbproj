@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{C9740F01-FD9E-443A-9F9F-DD3BF20E74E4}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace></RootNamespace>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>
+    </RootNamespace>
     <AssemblyName>DXSample</AssemblyName>
-    <FileUpgradeFlags></FileUpgradeFlags>
-    <UpgradeBackupLocation></UpgradeBackupLocation>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
     <OldToolsVersion>3.5</OldToolsVersion>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
@@ -30,19 +35,15 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <OptionExplicit>On</OptionExplicit>
-    <OptionCompare>Binary</OptionCompare>
-    <OptionStrict>Off</OptionStrict>
-    <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineDebug>true</DefineDebug>
-    <DefineTrace>true</DefineTrace>
+    <DefineConstants>DEBUG,TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
@@ -50,9 +51,9 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineDebug>false</DefineDebug>
-    <DefineTrace>true</DefineTrace>
+    <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>FFFB104CA3C9E711920370D40DAF2D563939B650</ManifestCertificateThumbprint>
@@ -73,12 +74,10 @@
     <Reference Include="Accessibility" />
     <Reference Include="DevExpress.BonusSkins.v15.2, Version=15.2.20.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.Data.v15.2, Version=15.2.20.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Images.v15.2, Version=15.2.20.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.Mvvm.v15.2, Version=15.2.20.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <SpecificVersion>False</SpecificVersion>
@@ -87,37 +86,29 @@
     <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.20.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v15.2.UI, Version=15.2.20.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.Utils.v15.2, Version=15.2.20.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Xpo.v15.2, Version=15.2.20.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.20.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.20.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.20.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.20.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.20.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
-      <Private>True</Private>
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.20.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.XtraVerticalGrid.v15.2, Version=15.2.20.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
     </Reference>
     <Reference Include="nunit.framework, Version=2.4.7.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77" />
     <Reference Include="PresentationCore" />
@@ -147,24 +138,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Import Include="Microsoft.VisualBasic" />
-    <Import Include="System.Collections.Generic" />
-    <Import Include="System.Collections" />
-    <Import Include="System.Diagnostics" />
-    <Import Include="System.Linq" />
-    <Import Include="System.Xml.Linq" />
-    <Import Include="System.Data" />
-    <Import Include="System.Drawing" />
-    <Import Include="System.Windows.Forms" />
-    <Import Include="System.Windows.Documents" />
-    <Import Include="System.Windows.Input" />
-    <Import Include="System.Windows.Media.Imaging" />
-    <Import Include="System.Windows.Media" />
-    <Import Include="System.Windows.Navigation" />
-    <Import Include="System.Windows" />
-    <Import Include="System" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Data\Record.vb" />
     <Compile Include="FilterNameProvider.vb" />
     <Compile Include="Main.vb">
@@ -174,29 +147,29 @@
       <DependentUpon>Main.vb</DependentUpon>
     </Compile>
     <Compile Include="Program.vb" />
-    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="Properties\AssemblyInfo.vb" />
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="My Project\Resources.resx">
-      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
-      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <CustomToolNamespace>DXSample.Properties</CustomToolNamespace>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="app.manifest" />
-    <None Include="My Project\DataSources\WindowsApplication3.Data.Detail.datasource" />
-    <None Include="My Project\DataSources\WindowsApplication3.Data.Record.datasource" />
-    <None Include="My Project\Settings.settings">
+    <None Include="Properties\DataSources\WindowsApplication3.Data.Detail.datasource" />
+    <None Include="Properties\DataSources\WindowsApplication3.Data.Record.datasource" />
+    <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <Compile Include="My Project\Resources.Designer.vb">
+    <Compile Include="Properties\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="My Project\Settings.Designer.vb">
+    <Compile Include="Properties\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -232,520 +205,650 @@
   <ItemGroup>
     <PublishFile Include="DevExpress.Data.v15.2">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Include</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="DevExpress.DataAccess.v15.2">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Include</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="DevExpress.Printing.v15.2.Core">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Include</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="DevExpress.Sparkline.v15.2.Core">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Include</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="DevExpress.Utils.v15.2">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Include</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="DevExpress.XtraEditors.v15.2">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Include</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="DevExpress.XtraGrid.v15.2">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Include</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="DevExpress.XtraLayout.v15.2">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Include</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="DevExpress.XtraPrinting.v15.2">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Include</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="de\DevExpress.Data.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="de\DevExpress.DataAccess.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="de\DevExpress.Office.v15.2.Core.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="de\DevExpress.Printing.v15.2.Core.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="de\DevExpress.RichEdit.v15.2.Core.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="de\DevExpress.Sparkline.v15.2.Core.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="de\DevExpress.Utils.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="de\DevExpress.Xpo.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="de\DevExpress.XtraBars.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="de\DevExpress.XtraEditors.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="de\DevExpress.XtraGrid.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="de\DevExpress.XtraLayout.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="de\DevExpress.XtraPrinting.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="de\DevExpress.XtraTreeList.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="es\DevExpress.Data.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="es\DevExpress.DataAccess.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="es\DevExpress.Office.v15.2.Core.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="es\DevExpress.Printing.v15.2.Core.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="es\DevExpress.RichEdit.v15.2.Core.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="es\DevExpress.Sparkline.v15.2.Core.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="es\DevExpress.Utils.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="es\DevExpress.Xpo.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="es\DevExpress.XtraBars.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="es\DevExpress.XtraEditors.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="es\DevExpress.XtraGrid.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="es\DevExpress.XtraLayout.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="es\DevExpress.XtraPrinting.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="es\DevExpress.XtraTreeList.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ja\DevExpress.Data.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ja\DevExpress.DataAccess.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ja\DevExpress.Office.v15.2.Core.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ja\DevExpress.Printing.v15.2.Core.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ja\DevExpress.RichEdit.v15.2.Core.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ja\DevExpress.Sparkline.v15.2.Core.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ja\DevExpress.Utils.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ja\DevExpress.Xpo.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ja\DevExpress.XtraBars.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ja\DevExpress.XtraEditors.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ja\DevExpress.XtraGrid.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ja\DevExpress.XtraLayout.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ja\DevExpress.XtraPrinting.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ja\DevExpress.XtraTreeList.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ru\DevExpress.Data.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ru\DevExpress.DataAccess.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ru\DevExpress.Office.v15.2.Core.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ru\DevExpress.Printing.v15.2.Core.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ru\DevExpress.RichEdit.v15.2.Core.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ru\DevExpress.Sparkline.v15.2.Core.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ru\DevExpress.Utils.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ru\DevExpress.Xpo.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ru\DevExpress.XtraBars.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ru\DevExpress.XtraEditors.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ru\DevExpress.XtraGrid.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ru\DevExpress.XtraLayout.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ru\DevExpress.XtraPrinting.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ru\DevExpress.XtraTreeList.v15.2.resources">
       <Visible>False</Visible>
-      <Group></Group>
-      <TargetPath></TargetPath>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
       <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
@@ -755,7 +858,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
