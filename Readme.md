@@ -6,7 +6,7 @@
 
 # WinForms Data Grid - Rename grid filters and serialize custom names
 
-When a end users applies a filter to a grid, the filter is shown within the [Filter Panel](https://docs.devexpress.com/WindowsForms/1424/controls-and-libraries/data-grid/visual-elements/view-common-elements/filter-panel). If the [AllowMRUFilterList](https://docs.devexpress.com/WindowsForms/DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.AllowMRUFilterList) option is enabled, the user can access [recently used filters](https://docs.devexpress.com/WindowsForms/1448/controls-and-libraries/data-grid/visual-elements/view-common-elements/views-mru-(most-recently-used)-filter-list) and apply them.
+When an end user applies a filter to a grid, the filter is shown within the [Filter Panel](https://docs.devexpress.com/WindowsForms/1424/controls-and-libraries/data-grid/visual-elements/view-common-elements/filter-panel). If the [AllowMRUFilterList](https://docs.devexpress.com/WindowsForms/DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.AllowMRUFilterList) option is enabled, the user can access [recently used filters](https://docs.devexpress.com/WindowsForms/1448/controls-and-libraries/data-grid/visual-elements/view-common-elements/views-mru-(most-recently-used)-filter-list) and apply them.
 
 This example shows how to allow the user to rename filters as needed:
 
@@ -40,7 +40,7 @@ void OnRestoreLayoutButtonClick(object sender, DevExpress.XtraBars.ItemClickEven
 }
 ```
 
-`GridFitlerItem` objects are not created automaticall. You should declare a special method in the `FilterNameProvider` class that creates such objects. Name this method according to the following pattern: "XtraCreate<PropertyName>Item". In this example, this is the `XtraCreateGridFiltersItem` method:
+`GridFitlerItem` objects are not created automatically. You should declare a special method in the `FilterNameProvider` class that creates such objects. Name this method according to the following pattern: "XtraCreate<PropertyName>Item". In this example, this is the `XtraCreateGridFiltersItem` method:
 
 ```csharp
 internal GridFitlerItem XtraCreateGridFiltersItem(XtraItemEventArgs e) {
