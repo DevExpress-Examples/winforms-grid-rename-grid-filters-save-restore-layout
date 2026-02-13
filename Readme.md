@@ -63,7 +63,7 @@ internal GridFitlerItem XtraCreateGridFiltersItem(XtraItemEventArgs e) {
 * [CustomFilterDisplayText Event](https://docs.devexpress.com/WindowsForms/DevExpress.XtraGrid.Views.Base.ColumnView.CustomFilterDisplayText)
 * [Save and Restore Grid Layout](https://docs.devexpress.com/WindowsForms/772/controls-and-libraries/data-grid/save-and-restore-layout)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=winforms-grid-rename-grid-filters-save-restore-layout&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=winforms-grid-rename-grid-filters-save-restore-layout&~~~was_helpful=no)
 
